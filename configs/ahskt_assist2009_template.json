@@ -1,0 +1,39 @@
+{
+  "project_name": "ahs-kt",
+  "task_name": "ahskt_assist2009_template",
+  "seed": 2026,
+  "dataset": {
+    "mode": "real_npz",
+    "train_path": "data/assist2009_train_ahskt.npz",
+    "valid_path": "data/assist2009_valid_ahskt.npz",
+    "test_path": "data/assist2009_test_ahskt.npz"
+  },
+  "model": {
+    "num_questions": 20000,
+    "num_concepts": 500,
+    "num_question_difficulty": 11,
+    "num_concept_difficulty": 11,
+    "num_behavior_clusters": 5,
+    "sequence_length": 100,
+    "embedding_dim": 128,
+    "difficulty_dim": 64,
+    "behavior_dim": 64,
+    "hidden_dim": 128,
+    "dropout": 0.2,
+    "use_behavior_cluster": true
+  },
+  "training": {
+    "epochs": 20,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "patience": 5
+  },
+  "demo": {
+    "train_size": 0,
+    "valid_size": 0,
+    "test_size": 0
+  },
+  "outputs": {
+    "root_dir": "outputs/assist2009_run"
+  }
+}

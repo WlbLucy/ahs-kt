@@ -1,0 +1,50 @@
+{
+  "project_name": "ahs-kt",
+  "task_name": "ahskt_algebra2005_notebook_seed2026",
+  "seed": 2026,
+  "dataset": {
+    "mode": "real_npz",
+    "train_path": "data/algebra2005_notebook_train_ahskt.npz",
+    "valid_path": "data/algebra2005_notebook_valid_ahskt.npz",
+    "test_path": "data/algebra2005_notebook_test_ahskt.npz"
+  },
+  "model": {
+    "num_questions": 173113,
+    "num_concepts": 112,
+    "num_question_difficulty": 100,
+    "num_concept_difficulty": 100,
+    "num_behavior_clusters": 5,
+    "sequence_length": 200,
+    "embedding_dim": 64,
+    "difficulty_dim": 32,
+    "behavior_dim": 32,
+    "hidden_dim": 96,
+    "dropout": 0.2,
+    "use_behavior_cluster": true,
+    "use_difficulty_features": true,
+    "use_behavior_features": true,
+    "use_target_interaction": true,
+    "question_global_easiness": 0.7182233392882248,
+    "concept_global_easiness": 0.7182233392882248,
+    "fusion_mode": "late_residual",
+    "behavior_condition_on_difficulty": false,
+    "aux_residual_scale": 0.1,
+    "difficulty_mode": "smoothed_target_calibration",
+    "difficulty_bias_scale": 0.05,
+    "difficulty_feature_source": "question_only"
+  },
+  "training": {
+    "epochs": 3,
+    "batch_size": 16,
+    "learning_rate": 0.001,
+    "patience": 2
+  },
+  "demo": {
+    "train_size": 0,
+    "valid_size": 0,
+    "test_size": 0
+  },
+  "outputs": {
+    "root_dir": "outputs/algebra2005_notebook_multiseed/seed_2026"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "project_name": "ahs-kt",
+  "task_name": "ahskt_demo",
+  "seed": 2026,
+  "dataset": {
+    "mode": "demo",
+    "train_path": "",
+    "valid_path": "",
+    "test_path": ""
+  },
+  "model": {
+    "num_questions": 200,
+    "num_concepts": 60,
+    "num_question_difficulty": 11,
+    "num_concept_difficulty": 11,
+    "num_behavior_clusters": 5,
+    "sequence_length": 50,
+    "embedding_dim": 64,
+    "difficulty_dim": 32,
+    "behavior_dim": 32,
+    "hidden_dim": 128,
+    "dropout": 0.2,
+    "use_behavior_cluster": true
+  },
+  "training": {
+    "epochs": 2,
+    "batch_size": 16,
+    "learning_rate": 0.001,
+    "patience": 3
+  },
+  "demo": {
+    "train_size": 128,
+    "valid_size": 64,
+    "test_size": 64
+  },
+  "outputs": {
+    "root_dir": "outputs/demo_run"
+  }
+}

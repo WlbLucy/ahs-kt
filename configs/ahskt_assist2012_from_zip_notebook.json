@@ -1,0 +1,39 @@
+{
+  "project_name": "ahs-kt",
+  "task_name": "ahskt_assist2012_from_zip_notebook",
+  "seed": 2026,
+  "dataset": {
+    "mode": "real_npz",
+    "train_path": "data/assist2012_from_zip_notebook/assist2012_train_ahskt.npz",
+    "valid_path": "data/assist2012_from_zip_notebook/assist2012_valid_ahskt.npz",
+    "test_path": "data/assist2012_from_zip_notebook/assist2012_test_ahskt.npz"
+  },
+  "model": {
+    "num_questions": 53091,
+    "num_concepts": 265,
+    "num_question_difficulty": 101,
+    "num_concept_difficulty": 98,
+    "num_behavior_clusters": 5,
+    "sequence_length": 100,
+    "embedding_dim": 64,
+    "difficulty_dim": 32,
+    "behavior_dim": 32,
+    "hidden_dim": 96,
+    "dropout": 0.2,
+    "use_behavior_cluster": true
+  },
+  "training": {
+    "epochs": 5,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "patience": 2
+  },
+  "demo": {
+    "train_size": 0,
+    "valid_size": 0,
+    "test_size": 0
+  },
+  "outputs": {
+    "root_dir": "outputs/assist2012_from_zip_notebook_run"
+  }
+}

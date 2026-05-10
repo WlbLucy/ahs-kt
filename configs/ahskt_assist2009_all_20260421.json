@@ -1,0 +1,52 @@
+{
+  "project_name": "ahs-kt",
+  "task_name": "ahskt_assist2009_all_20260421",
+  "seed": 20260421,
+  "dataset": {
+    "mode": "real_npz",
+    "train_path": "data/assist2009_all_20260421/assist2009_all_20260421_train_ahskt.npz",
+    "valid_path": "data/assist2009_all_20260421/assist2009_all_20260421_valid_ahskt.npz",
+    "test_path": "data/assist2009_all_20260421/assist2009_all_20260421_test_ahskt.npz"
+  },
+  "model": {
+    "num_questions": 17737,
+    "num_concepts": 149,
+    "num_question_difficulty": 97,
+    "num_concept_difficulty": 92,
+    "num_behavior_clusters": 5,
+    "sequence_length": 100,
+    "embedding_dim": 64,
+    "difficulty_dim": 32,
+    "behavior_dim": 32,
+    "hidden_dim": 96,
+    "dropout": 0.2,
+    "use_behavior_cluster": true,
+    "use_difficulty_features": true,
+    "use_behavior_features": true,
+    "use_target_interaction": true,
+    "use_relative_speed": true,
+    "use_soft_behavior_prototypes": true,
+    "question_global_easiness": 0.6632284071373525,
+    "concept_global_easiness": 0.6632284071373525,
+    "fusion_mode": "late_residual",
+    "behavior_condition_on_difficulty": false,
+    "aux_residual_scale": 0.1,
+    "difficulty_mode": "smoothed_target_calibration",
+    "difficulty_bias_scale": 0.05,
+    "difficulty_feature_source": "question_only"
+  },
+  "training": {
+    "epochs": 3,
+    "batch_size": 16,
+    "learning_rate": 0.001,
+    "patience": 2
+  },
+  "demo": {
+    "train_size": 0,
+    "valid_size": 0,
+    "test_size": 0
+  },
+  "outputs": {
+    "root_dir": "outputs/assist2009_all_20260421_run"
+  }
+}

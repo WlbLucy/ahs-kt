@@ -1,0 +1,66 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# Notebook, editor, and OS files
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+
+# Build and packaging artifacts
+build/
+dist/
+*.egg-info/
+
+# Logs and local reports
+*.log
+.coverage
+coverage.xml
+
+# Project-generated experiment artifacts
+outputs/
+checkpoints/
+wandb/
+runs/
+events.out.tfevents*
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.safetensors
+
+# Dataset caches and generated data files
+data/**/.cache/
+data/**/*.npz
+data/**/*.npy
+data/**/*.pkl
+data/**/*.pickle
+data/**/*.csv
+data/**/*.txt
+data/**/*.zip
+data/**/*.gz
+data/**/*.bz2
+data/**/*.7z
+data/**/*.tar
+data/**/*.parquet
+data/**/*.feather
+data/**/*.json
+
+# Keep hand-written docs and helper scripts in data/
+!data/README.md
+!data/**/README.md
+!data/**/README.txt
+!data/**/upload.py
+!data/**/download_fix.py

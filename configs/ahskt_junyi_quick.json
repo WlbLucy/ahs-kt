@@ -1,0 +1,50 @@
+{
+  "project_name": "ahs-kt",
+  "task_name": "ahskt_junyi_quickstart_1k",
+  "seed": 2026,
+  "dataset": {
+    "mode": "real_npz",
+    "train_path": "data/junyi/junyi_quick_train_ahskt.npz",
+    "valid_path": "data/junyi/junyi_quick_valid_ahskt.npz",
+    "test_path": "data/junyi/junyi_quick_test_ahskt.npz"
+  },
+  "model": {
+    "num_questions": 583,
+    "num_concepts": 39,
+    "num_question_difficulty": 10,
+    "num_concept_difficulty": 10,
+    "num_behavior_clusters": 5,
+    "sequence_length": 100,
+    "embedding_dim": 64,
+    "difficulty_dim": 32,
+    "behavior_dim": 32,
+    "hidden_dim": 96,
+    "dropout": 0.2,
+    "use_behavior_cluster": true,
+    "use_difficulty_features": true,
+    "use_behavior_features": true,
+    "use_target_interaction": false,
+    "fusion_mode": "early",
+    "behavior_condition_on_difficulty": true,
+    "aux_residual_scale": 0.25,
+    "difficulty_mode": "embedding",
+    "difficulty_bias_scale": 0.1,
+    "difficulty_feature_source": "question_concept",
+    "question_global_easiness": 0.8301082689902084,
+    "concept_global_easiness": 0.8301082689902084
+  },
+  "training": {
+    "epochs": 2,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "patience": 1
+  },
+  "demo": {
+    "train_size": 0,
+    "valid_size": 0,
+    "test_size": 0
+  },
+  "outputs": {
+    "root_dir": "outputs/junyi_quick_run"
+  }
+}
